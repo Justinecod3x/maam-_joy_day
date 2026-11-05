@@ -1,0 +1,1068 @@
+
+/* =====================================
+   GOOGLE FONTS
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+
+/* =====================================
+   GLOBAL SETTINGS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    color: #684b62;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 10% 20%, #ffe1ed 0, transparent 35%),
+        radial-gradient(circle at 90% 80%, #e9ddff 0, transparent 35%),
+        linear-gradient(135deg, #fff7f9, #f9efff, #fff0f5);
+}
+
+
+/* =====================================
+   FLOATING BACKGROUND DECORATIONS
+===================================== */
+
+.floating-decorations {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-decorations span {
+    position: absolute;
+    font-size: 28px;
+    opacity: 0.35;
+    animation: floatDecoration 8s ease-in-out infinite;
+}
+
+.floating-decorations span:nth-child(1) {
+    top: 10%;
+    left: 8%;
+}
+
+.floating-decorations span:nth-child(2) {
+    top: 20%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.floating-decorations span:nth-child(3) {
+    top: 65%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+.floating-decorations span:nth-child(4) {
+    top: 75%;
+    right: 8%;
+    animation-delay: 3s;
+}
+
+.floating-decorations span:nth-child(5) {
+    top: 40%;
+    left: 90%;
+    animation-delay: 4s;
+}
+
+.floating-decorations span:nth-child(6) {
+    top: 88%;
+    left: 45%;
+    animation-delay: 2s;
+}
+
+@keyframes floatDecoration {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(15deg);
+    }
+}
+
+
+/* =====================================
+   MUSIC BUTTON
+===================================== */
+
+.music-button {
+    position: fixed;
+    top: 22px;
+    right: 22px;
+    z-index: 10000;
+
+    padding: 12px 20px;
+
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(15px);
+
+    color: #a44e83;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(160, 89, 130, 0.15);
+
+    transition: 0.3s ease;
+}
+
+.music-button:hover {
+    transform: translateY(-3px);
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(160, 89, 130, 0.25);
+}
+
+
+/* =====================================
+   WELCOME SECTION
+===================================== */
+
+.welcome-section {
+    position: relative;
+    z-index: 1;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 90px 20px 40px;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 55px 45px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 35px;
+
+    background: rgba(255,255,255,0.68);
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 70px rgba(173, 105, 151, 0.15),
+        inset 0 0 25px rgba(255,255,255,0.7);
+
+    animation: cardAppear 1s ease;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.school-icon {
+    font-size: 55px;
+    margin-bottom: 18px;
+}
+
+.top-text {
+    color: #b477a0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.welcome-card h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 65px);
+    font-weight: 800;
+
+    background: linear-gradient(135deg, #d66b9e, #9564b7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-card h2 {
+    margin-top: 10px;
+    color: #a36b96;
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+}
+
+.welcome-message {
+    max-width: 420px;
+    margin: 20px auto;
+
+    color: #8e788b;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+
+/* =====================================
+   GIFT ANIMATION
+===================================== */
+
+.gift-container {
+    position: relative;
+
+    width: 160px;
+    height: 150px;
+
+    margin: 30px auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: giftFloat 3s ease-in-out infinite;
+}
+
+@keyframes giftFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.gift-box {
+    font-size: 105px;
+    position: relative;
+    z-index: 2;
+    transition: 0.5s ease;
+}
+
+.gift-bow {
+    position: absolute;
+    top: -2px;
+    z-index: 3;
+    font-size: 42px;
+}
+
+.gift-lid {
+    position: absolute;
+    top: 35px;
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(135deg, #ff9fca, #d76caa);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.gift.opening .gift-box {
+    transform: scale(1.3) rotate(12deg);
+}
+
+
+/* =====================================
+   OPEN GIFT BUTTON
+===================================== */
+
+.gift-instruction {
+    color: #a68aa1;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.open-button {
+    padding: 16px 30px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #f18bb7, #b47ad1);
+
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(196, 111, 161, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+.open-button:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(196, 111, 161, 0.4);
+}
+
+.open-button:active {
+    transform: scale(0.96);
+}
+
+.open-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =====================================
+   BIRTHDAY SECTION
+===================================== */
+
+.birthday-section {
+    position: relative;
+    z-index: 1;
+
+    display: none;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    min-height: 100vh;
+    padding: 100px 20px 60px;
+}
+
+.birthday-card {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 50px 55px;
+
+    text-align: center;
+
+    border-radius: 35px;
+    border: 1px solid white;
+
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(18px);
+
+    box-shadow: 0 25px 70px rgba(173, 105, 151, 0.16);
+
+    animation: cardAppear 1s ease;
+}
+
+
+/* =====================================
+   CELEBRATION LABEL
+===================================== */
+
+.celebration-label {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    border-radius: 50px;
+
+    background: #fff0f6;
+    color: #c46b9c;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   BIRTHDAY TITLE
+===================================== */
+
+.birthday-card > h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 6vw, 55px);
+
+    color: #a85e91;
+    line-height: 1.3;
+}
+
+.birthday-card > h1 span {
+    display: block;
+
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(42px, 7vw, 65px);
+
+    color: #d47ba9;
+    font-weight: 400;
+}
+
+.subtitle {
+    color: #967f91;
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   BIRTHDAY CAKE
+===================================== */
+
+.cake-container {
+    margin: 35px auto;
+}
+
+.cake {
+    font-size: 100px;
+
+    display: inline-block;
+
+    animation: cakeBounce 2s ease-in-out infinite;
+}
+
+@keyframes cakeBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(3deg);
+    }
+}
+
+.cake-message {
+    color: #c77ba5;
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+}
+
+
+/* =====================================
+   LETTER CONTAINER
+===================================== */
+
+.letter-container {
+    max-width: 700px;
+
+    margin: 40px auto;
+
+    padding: 40px 45px;
+
+    text-align: left;
+
+    border-radius: 25px;
+
+    background: linear-gradient(145deg, #fff9fc, #fff0f7);
+
+    border: 1px solid #f7dce9;
+
+    box-shadow: 0 12px 35px rgba(189, 115, 156, 0.10);
+}
+
+.letter-icon {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.letter-container h2 {
+    text-align: center;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+
+    color: #b36d98;
+
+    margin-bottom: 30px;
+}
+
+.letter-greeting {
+    color: #aa6790;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.letter-text {
+    color: #806c7b;
+
+    font-size: 14px;
+    line-height: 2;
+
+    white-space: pre-line;
+}
+
+.letter-ending {
+    margin-top: 25px;
+
+    text-align: right;
+
+    color: #b16a96;
+    font-family: 'Great Vibes', cursive;
+    font-size: 27px;
+}
+
+
+/* =====================================
+   THANK YOU SECTION
+===================================== */
+
+.thank-you {
+    padding: 35px 20px;
+
+    margin-top: 30px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #fff0f6, #f5edff);
+}
+
+.thank-you h2 {
+    font-family: 'Playfair Display', serif;
+    color: #b46b9a;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.thank-you p {
+    color: #917b90;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.flowers {
+    margin-top: 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+
+/* =====================================
+   REPLAY BUTTON
+===================================== */
+
+.replay-button {
+    margin-top: 35px;
+
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #d77fa9, #a77bc7);
+
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(175, 110, 158, 0.25);
+
+    transition: 0.3s ease;
+}
+
+.replay-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(175, 110, 158, 0.35);
+}
+
+
+/* =====================================
+   BALLOONS
+===================================== */
+
+.balloons {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+
+/* =====================================
+   CONFETTI
+===================================== */
+
+#confetti-container {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: 9998;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 600px) {
+
+    .welcome-card {
+        padding: 40px 22px;
+        border-radius: 25px;
+    }
+
+    .birthday-card {
+        padding: 40px 20px;
+        border-radius: 25px;
+    }
+
+    .music-button {
+        top: 12px;
+        right: 12px;
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+
+    .school-icon {
+        font-size: 45px;
+    }
+
+    .letter-container {
+        padding: 30px 22px;
+    }
+
+    .letter-container h2 {
+        font-size: 23px;
+    }
+
+    .letter-text {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .flowers {
+        font-size: 23px;
+        letter-spacing: 2px;
+    }
+
+    .open-button,
+    .replay-button {
+        width: 100%;
+        font-size: 13px;
+    }
+
+}
+
+
+
+/* =========================================
+   NEW LUXURY BIRTHDAY ELEMENTS
+========================================= */
+
+.welcome-card,
+.birthday-card {
+    border: 1px solid rgba(255,255,255,.95);
+    box-shadow:
+        0 25px 80px rgba(173,105,151,.16),
+        inset 0 0 30px rgba(255,255,255,.7);
+}
+
+/* Decorative headings */
+
+.welcome-top-decoration,
+.birthday-top-decoration {
+    color: #d995bb;
+    letter-spacing: 5px;
+    font-size: 15px;
+    margin-bottom: 25px;
+    animation: decorationGlow 3s infinite ease-in-out;
+}
+
+@keyframes decorationGlow {
+    0%, 100% {
+        opacity: .5;
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 15px #efb2d2;
+    }
+}
+
+/* Welcome divider */
+
+.welcome-divider,
+.birthday-divider {
+    margin: 20px auto;
+    color: #d98eb8;
+    font-size: 24px;
+    animation: heartBeat 2s infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Welcome footer */
+
+.welcome-bottom {
+    margin-top: 30px;
+    color: #b38aa7;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+}
+
+/* =========================================
+   TEACHER PHOTO-STYLE FRAME
+========================================= */
+
+.teacher-frame {
+    position: relative;
+    width: 250px;
+    min-height: 230px;
+    margin: 35px auto;
+    padding: 12px;
+
+    border-radius: 125px 125px 35px 35px;
+
+    background: linear-gradient(
+        135deg,
+        #f8d4e6,
+        #fff,
+        #e5d5f7
+    );
+
+    box-shadow:
+        0 15px 35px rgba(186,112,158,.2),
+        inset 0 0 10px white;
+
+    animation: frameFloat 4s ease-in-out infinite;
+}
+
+@keyframes frameFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.frame-content {
+    height: 205px;
+    border-radius: 115px 115px 25px 25px;
+
+    background: linear-gradient(
+        145deg,
+        #fff5fa,
+        #f2eaff
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid white;
+}
+
+.teacher-icon {
+    font-size: 85px;
+    animation: teacherWave 3s ease-in-out infinite;
+}
+
+@keyframes teacherWave {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.frame-content p {
+    color: #a76b96;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.frame-content span {
+    color: #aa91a5;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.frame-decoration {
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    font-size: 30px;
+    animation: heartBeat 3s infinite;
+}
+
+.bottom-flower {
+    top: auto;
+    bottom: 15px;
+    left: auto;
+    right: -15px;
+}
+
+/* =========================================
+   CAKE SPARKLES
+========================================= */
+
+.cake-sparkles {
+    color: #d9a1bd;
+    font-size: 22px;
+    letter-spacing: 10px;
+    animation: sparkle 2s infinite;
+}
+
+/* =========================================
+   LETTER TOP DECORATION
+========================================= */
+
+.letter-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    color: #c47ba5;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.letter-top span:first-child,
+.letter-top span:last-child {
+    font-size: 18px;
+}
+
+.letter-divider {
+    color: #d89aba;
+    text-align: center;
+    margin: 22px 0;
+    letter-spacing: 4px;
+}
+
+.letter-bottom-decoration {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 27px;
+    letter-spacing: 8px;
+}
+
+/* =========================================
+   APPRECIATION GRID
+========================================= */
+
+.appreciation-section {
+    margin: 45px auto;
+}
+
+.appreciation-section > h2 {
+    font-family: 'Playfair Display', serif;
+    color: #a96c98;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.appreciation-subtitle {
+    color: #9a8496;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.appreciation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.appreciation-item {
+    padding: 25px 15px;
+    border-radius: 20px;
+
+    background: linear-gradient(
+        145deg,
+        #fff8fc,
+        #f5efff
+    );
+
+    border: 1px solid #f3dce9;
+
+    transition: .4s ease;
+}
+
+.appreciation-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(185,111,158,.15);
+}
+
+.appreciation-item div {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.appreciation-item h3 {
+    color: #b16f99;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+}
+
+.appreciation-item p {
+    color: #927e8e;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   THANK YOU DECORATIONS
+========================================= */
+
+.thank-you-decoration {
+    font-size: 25px;
+    margin-bottom: 15px;
+    animation: decorationGlow 3s infinite;
+}
+
+.special-message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px !important;
+    color: #bd7aa3 !important;
+    margin-top: 15px;
+}
+
+/* =========================================
+   FINAL BIRTHDAY MESSAGE
+========================================= */
+
+.final-message {
+    margin: 45px auto 25px;
+    padding: 30px 15px;
+
+    border-top: 1px solid #f1d8e7;
+    border-bottom: 1px solid #f1d8e7;
+}
+
+.final-message p {
+    color: #a18a9e;
+    font-size: 13px;
+}
+
+.final-message h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #d27da9;
+    margin: 10px 0;
+
+    animation: titleGlow 3s infinite ease-in-out;
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px #f7c6df;
+    }
+    50% {
+        text-shadow: 0 0 20px #e99ac4;
+    }
+}
+
+.final-message span {
+    color: #a58b9e;
+    font-size: 12px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.birthday-footer {
+    margin-top: 30px;
+    color: #ad8ca5;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+.birthday-footer span {
+    color: #e28bb6;
+    font-size: 18px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+
+    .appreciation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-frame {
+        width: 220px;
+        min-height: 210px;
+    }
+
+    .frame-content {
+        height: 185px;
+    }
+
+    .teacher-icon {
+        font-size: 70px;
+    }
+
+    .appreciation-section > h2 {
+        font-size: 25px;
+    }
+
+    .final-message h2 {
+        font-size: 40px;
+    }
+
+    .letter-top {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+}
