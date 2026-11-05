@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,20 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#ffe4ec">
+    <meta name="description" content="A special birthday celebration for our dear teacher, Ma'am Joy Sarmiento.">
+
     <title>Happy Birthday, Our Dear Teacher!</title>
 
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- BACKGROUND DECORATIONS -->
-    <div class="floating-decorations">
+    <div class="floating-decorations" aria-hidden="true">
         <span>🌸</span>
         <span>⭐</span>
         <span>💗</span>
@@ -33,12 +38,23 @@
     </div>
 
     <!-- BALLOONS -->
-    <div class="balloons" id="balloons"></div>
+    <div class="balloons" id="balloons" aria-hidden="true"></div>
 
     <!-- MUSIC BUTTON -->
-    <button class="music-button" id="musicButton" type="button">
+    <button
+        class="music-button"
+        id="musicButton"
+        type="button"
+        aria-label="Turn birthday music on or off">
         🎵 Music Off
     </button>
+
+    <!-- BACKGROUND MUSIC -->
+    <!-- Put your music file inside a folder named music -->
+    <audio id="birthdayMusic" loop preload="auto">
+        <source src="music/birthday-music.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
 
 
     <!-- =================================
@@ -53,9 +69,7 @@
                 ✦ ─────── ♡ ─────── ✦
             </div>
 
-            <div class="school-icon">
-                🏫
-            </div>
+            <div class="school-icon">🏫</div>
 
             <p class="top-text">
                 A SPECIAL CELEBRATION FOR
@@ -63,7 +77,7 @@
 
             <h1>Happy Birthday!</h1>
 
-            <h2>Maam Joy💗</h2>
+            <h2>Ma'am Joy 💗</h2>
 
             <div class="welcome-divider">
                 <span>🌷</span>
@@ -90,7 +104,8 @@
             </div>
 
             <p class="gift-instruction">
-                A little surprise, wrapped with love, is waiting for you...
+                A little surprise, wrapped with love,
+                is waiting for you...
             </p>
 
             <button class="open-button" id="openGift" type="button">
@@ -139,7 +154,7 @@
             </div>
 
 
-            <!-- PHOTO FRAME DECORATION -->
+            <!-- TEACHER PHOTO FRAME -->
             <div class="teacher-frame">
 
                 <div class="frame-decoration">
@@ -147,12 +162,17 @@
                 </div>
 
                 <div class="frame-content">
+
                     <div class="teacher-icon">
                         👩‍🏫
                     </div>
 
                     <p>A Wonderful Teacher</p>
-                    <span>Forever appreciated and loved</span>
+
+                    <span>
+                        Forever appreciated and loved
+                    </span>
+
                 </div>
 
                 <div class="frame-decoration bottom-flower">
@@ -200,45 +220,64 @@
                 </div>
 
                 <p class="letter-greeting">
-                    Dear Our Dear Teacher,
+                    Dear Ma'am Joy,
                 </p>
 
-                <p class="letter-text">
+                <div class="letter-text">
 
-                    Happy Birthday to our wonderful teacher!
+                    <p>
+                        HAPPY BIRTHDAY TO OUR DEAN,
+                        MRS. JOY SARMIENTO! 🎉❤️
+                    </p>
 
-                    On your special day, we want to express
-                    our heartfelt gratitude for everything
-                    you have done for us.
+                    <p>
+                        First of all, we would like to express
+                        our heartfelt gratitude for your never-ending
+                        love, kindness, and care for each and every
+                        one of us. Thank you for your patience,
+                        understanding, and guidance, especially
+                        to us, the 3rd Year BSIT students.
+                    </p>
 
-                    Thank you for sharing your knowledge,
-                    guiding us through challenges, and
-                    inspiring us to become better students
-                    and better people.
+                    <p>
+                        We may be frequent visitors to your office,
+                        but we are always happy to have the chance
+                        to share stories, laugh, and have a little
+                        chat with you, even when it's because of
+                        something we did wrong.
+                    </p>
 
-                    Your patience, kindness, dedication,
-                    and encouragement mean more to us
-                    than words can express.
+                    <p>
+                        Your office has become a place where we
+                        can share our stories, learn from our
+                        mistakes, and feel your warmth and
+                        understanding.
+                    </p>
 
-                    You are not just a teacher who teaches
-                    lessons from books, but someone who
-                    teaches us valuable lessons about life.
+                    <p>
+                        Mrs. Joy, happy, happy birthday!
+                        We wish you a wonderful birthday filled
+                        with love and happiness. May the Lord
+                        bless you with a long and healthy life,
+                        endless joy, and many more wonderful
+                        years ahead.
+                    </p>
 
-                    May your birthday be filled with happiness,
-                    laughter, good health, and countless blessings.
+                    <p>
+                        Once again, happiest birthday, Ma'am!
+                        We truly appreciate you and are grateful
+                        to have you as our Dean. Thank you for
+                        everything! ❤️
+                    </p>
 
-                    May all your dreams come true, and may
-                    you continue to inspire many more students.
-
-                </p>
+                </div>
 
                 <div class="letter-divider">
                     ✧ ───────── ✧
                 </div>
 
                 <p class="letter-ending">
-                    With love and appreciation,
-                    <br>
+                    With love and appreciation,<br>
                     Your Grateful Students 💗
                 </p>
 
@@ -322,7 +361,9 @@
 
                 <h2>Happy Birthday! 💗</h2>
 
-                <span>Celebrating you today and always.</span>
+                <span>
+                    Celebrating you today and always.
+                </span>
 
             </div>
 
@@ -345,7 +386,7 @@
 
 
     <!-- CONFETTI CONTAINER -->
-    <div id="confetti-container"></div>
+    <div id="confetti-container" aria-hidden="true"></div>
 
 
     <!-- JAVASCRIPT -->
@@ -353,3 +394,4 @@
 
 </body>
 </html>
+```
